@@ -1,0 +1,15 @@
+{
+    "version" : 3,
+    "configurePresets" : [
+        {
+            "name": "gcc15-release",
+            "displayName": "GCC 15 Release",
+            "binaryDir": "${sourceDir}/build",
+            "generator": "Ninja",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_CXX_COMPILER": "g++-15"
+            }
+        }
+    ]
+}
