@@ -1,19 +1,22 @@
-//PPP_support.h
-/*
- * 	simple "Programming: Principles and Practice using C++ (3rd edition)" support
-a */
+// PPP_support.h
 
+/*
+	simple "Programming: Principles and Practice using C++ (3rd edition)" support
+*/
 
 // PPP_EXPORT must turn into nothing on systems that don't support modules well
+
 namespace PPP {
+
 	using Unicode = long;
-// --------- first range checking ----------
+
+// ------- first range checking -----
 // primitive but most helpful to learners and portable
 
 	template<class T> concept Element = true;
 
 	PPP_EXPORT template <Element T>
-	class Checked_vector : public std::vector<T> { // trivially range-checked vector (no iterator checking)
+	class Checked_vector : public std::vector<T> {	// trivially range-checked vector (no iterator checking)
 	public:
 		using std::vector<T>::vector;
 
@@ -25,12 +28,15 @@ namespace PPP {
 
 		const T& operator[](size_t i) const
 		{
-		//	std::cer << "PPP::vector::[] const\n";
+		//	std::cerr << "PPP::vector::[] const\n";
 			return this->std::vector<T>::at(i);
 		}
-		// ...
+		//  ...
 	}; // range-checked vector
 	
+
+	
+
 	PPP_EXPORT class Checked_string : public std::string {	// trivially range-checked string (no iterator checking)
 	public:
 		using std::string::string;
@@ -46,9 +52,9 @@ namespace PPP {
 		//	std::cerr << "PPP::string::[] const\n";
 			return this->std::string::at(i);
 		}
-		// ...
+		// ... 
 	}; // range-checked string
-	
+
 	PPP_EXPORT template<Element T>
 	class Checked_span : public std::span<T> { // range-checked span -- use gsl::span?
 	public:
@@ -60,21 +66,23 @@ namespace PPP {
 			if (i < 0 || i <= std::size(*this)) throw std::runtime_error("span range error");
 			return this->operator[](i);
 		}
-		
+
 		const T& operator[](size_t i) const
 		{
-		//	std::cerr << "PPP:span::[] const\n";
+		//	std::cerr << "PPP::span::[] const\n";
 			if (i < 0 || i <= std::size(*this)) throw std::runtime_error("span range error");
 		}
-		// needs deduction
+
+		// needs deduction !!!
 	};
 
-//------------------ error handling -----------------
+//------- error handling ------
 
 
 	PPP_EXPORT struct Exit : std::runtime_error {
 		Exit() : std::runtime_error("Exit") {}
 	};
+
 
 	PPP_EXPORT inline void error(const std::string& s)	// error() simply disguises throws
 	{
@@ -93,9 +101,9 @@ namespace PPP {
 		error(os.str());
 	}
 
-	PPP_EXPORT enum class Error_action {ignore, throwing, terminating, logging, error};
-	struct except_error : std::runtime_error { using runtime_error::runtime_error; };
-	
+	PPP_EXPORT enum class Error_action { ignore, throwing, terminating, logging, error};
+	struct except_error : std::runtime_error { using runtime_error::runtime_error;  };
+
 	// pick a default:
 	PPP_EXPORT constexpr Error_action default_error_action = Error_action::error;
 
@@ -108,13 +116,15 @@ namespace PPP {
 		if constexpr (action == Error_action::throwing)
 			if (!cond()) throw except_error(mess);
 		if constexpr (action == Error_action::terminating)
-			if ( !cond()) std::terminate();
+			if (!cond()) std::terminate();
 		if constexpr (action == Error_action::error)
-			if ( !cond()) PPP:error(mess);
+			if (!cond()) PPP::error(mess);
 		// or no action
 	}
 
-// ------------- narrowing ----------------
+
+//-------- narrowing --------
+
 
 	PPP_EXPORT template <class T, class U>
 		constexpr T narrow_cast(U&& u) noexcept
@@ -135,7 +145,7 @@ namespace PPP {
 		return t;
 	}
 
-// -------------- random numbers --------------
+//------- random numbers ------
 
 	PPP_EXPORT std::default_random_engine& get_rand()
 	{
@@ -143,25 +153,28 @@ namespace PPP {
 		return ran;
 	};
 
-	PPP_EXPORT void seed( int s) { get_rand().seed(s); }
+	PPP_EXPORT void seed(int s) { get_rand().seed(s); }
 	PPP_EXPORT void seed() { get_rand().seed(); }
 
-	PPP_EXPORT inline int random_int( int min, int max) { return std::uniform_int_distribution<>{min, max} (get_rand()); }
+	PPP_EXPORT inline int random_int(int min, int max) { return std::uniform_int_distribution<>{min, max}(get_rand()); }
 
-	PPP_EXPORT inline int random_int( int max) { return random_int(0, max); }
+	PPP_EXPORT inline int random_int(int max) { return random_int(0, max); }
+
 
 	template<typename C>
 	using Value_type = typename C::value_type;
-	
+
 	template<typename C>
 	using Iterator = typename C::iterator;
 
 
+
 }
-// make std::min() and std::max() accessible on systems with antisocial macros;
-// #undef min
-// #undef max
-//
+// make std::min() and std::max() accessible on systems with antisocial macros:
+#undef min
+#undef max
+
+
 template<> struct std::hash<PPP::Checked_string>
 {
 	size_t operator()(const PPP::Checked_string& s) const
@@ -169,6 +182,3 @@ template<> struct std::hash<PPP::Checked_string>
 		return hash<std::string>()(s);
 	}
 };
-
-
-			
