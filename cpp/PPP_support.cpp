@@ -6,6 +6,9 @@
 
 // PPP_EXPORT must turn into nothing on systems that don't support modules well
 
+#ifndef PPP_EXPORT
+#define PPP_EXPORT export;
+
 namespace PPP {
 
 	using Unicode = long;

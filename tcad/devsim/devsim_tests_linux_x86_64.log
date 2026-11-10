@@ -1,0 +1,180 @@
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/vboxuser/Workspace/Source/devsim/goldenresults/devsim_tests_linux_x86_64/run
+Test project /home/vboxuser/Workspace/Source/devsim/goldenresults/devsim_tests_linux_x86_64/run
+      Start 34: testing/mesh3
+      Start 46: testing/trimesh1
+      Start 50: testing/mos_2d
+      Start 15: testing/pythonmesh1d
+ 1/86 Test #34: testing/mesh3 ..........................   Passed    0.12 sec
+      Start 35: testing/mesh4
+ 2/86 Test #15: testing/pythonmesh1d ...................   Passed    0.12 sec
+      Start 36: testing/mesh2d
+ 3/86 Test #46: testing/trimesh1 .......................   Passed    0.16 sec
+      Start 47: testing/trimesh2
+ 4/86 Test #36: testing/mesh2d .........................   Passed    0.13 sec
+      Start 48: testing/noise_res_2d
+ 5/86 Test #47: testing/trimesh2 .......................   Passed    0.12 sec
+      Start 66: examples/capacitance/cap2d
+ 6/86 Test #35: testing/mesh4 ..........................   Passed    0.16 sec
+      Start 68: examples/bioapp1/bioapp1_2d
+ 7/86 Test #50: testing/mos_2d .........................   Passed    0.79 sec
+      Start 52: testing/mos_2d_restart2
+ 8/86 Test #48: testing/noise_res_2d ...................   Passed    0.59 sec
+      Start 70: examples/bioapp1/bioapp1_3d
+ 9/86 Test #52: testing/mos_2d_restart2 ................   Passed    0.42 sec
+      Start 75: examples/diode/gmsh_diode2d
+10/86 Test #66: examples/capacitance/cap2d .............   Passed    1.05 sec
+      Start 76: examples/diode/gmsh_diode3d
+11/86 Test #75: examples/diode/gmsh_diode2d ............   Passed    0.88 sec
+      Start  1: testing/info
+12/86 Test  #1: testing/info ...........................   Passed    0.09 sec
+      Start  2: testing/cap2
+13/86 Test  #2: testing/cap2 ...........................   Passed    2.70 sec
+      Start  3: testing/ssac_cap
+14/86 Test #76: examples/diode/gmsh_diode3d ............   Passed    3.78 sec
+      Start  4: testing/ssac_cap_2d_edge
+15/86 Test  #3: testing/ssac_cap .......................   Passed    0.34 sec
+      Start  5: testing/ssac_cap_2d_element
+16/86 Test #70: examples/bioapp1/bioapp1_3d ............   Passed    4.69 sec
+      Start  6: testing/ssac_cap_3d_edge
+17/86 Test  #4: testing/ssac_cap_2d_edge ...............   Passed    0.63 sec
+      Start  7: testing/ssac_cap_3d_element
+18/86 Test  #5: testing/ssac_cap_2d_element ............   Passed    0.66 sec
+      Start  8: testing/equation1
+19/86 Test  #6: testing/ssac_cap_3d_edge ...............   Passed    0.36 sec
+      Start  9: testing/ptest1
+20/86 Test  #7: testing/ssac_cap_3d_element ............   Passed    0.18 sec
+      Start 10: testing/ptest2
+21/86 Test  #9: testing/ptest1 .........................   Passed    0.15 sec
+      Start 11: testing/testfunc
+22/86 Test  #8: testing/equation1 ......................   Passed    0.17 sec
+      Start 12: testing/testfunc_extended
+23/86 Test #12: testing/testfunc_extended ..............   Passed    0.11 sec
+      Start 13: testing/utf8_2
+24/86 Test #11: testing/testfunc .......................   Passed    0.16 sec
+      Start 14: testing/laux1
+25/86 Test #10: testing/ptest2 .........................   Passed    0.40 sec
+      Start 16: testing/Fermi1
+26/86 Test #13: testing/utf8_2 .........................   Passed    0.17 sec
+      Start 17: testing/Fermi1_float128
+27/86 Test #16: testing/Fermi1 .........................   Passed    0.12 sec
+      Start 18: testing/GaussFermi
+28/86 Test #17: testing/Fermi1_float128 ................   Passed    0.13 sec
+      Start 19: testing/GaussFermi_float128
+29/86 Test #14: testing/laux1 ..........................   Passed    0.29 sec
+      Start 20: testing/kahan
+30/86 Test #18: testing/GaussFermi .....................   Passed    0.14 sec
+      Start 21: testing/kahan_float128
+31/86 Test #19: testing/GaussFermi_float128 ............   Passed    0.13 sec
+      Start 22: testing/fpetest1
+32/86 Test #20: testing/kahan ..........................   Passed    0.11 sec
+      Start 23: testing/fpetest2
+33/86 Test #22: testing/fpetest1 .......................   Passed    0.11 sec
+      Start 24: testing/res1
+34/86 Test #21: testing/kahan_float128 .................   Passed    0.13 sec
+      Start 25: testing/res2
+35/86 Test #23: testing/fpetest2 .......................   Passed    0.17 sec
+      Start 26: testing/res3
+36/86 Test #24: testing/res1 ...........................   Passed    0.21 sec
+      Start 27: testing/ssac_res
+37/86 Test #25: testing/res2 ...........................   Passed    0.26 sec
+      Start 28: testing/noise_res
+38/86 Test #26: testing/res3 ...........................   Passed    0.20 sec
+      Start 29: testing/symdiff1
+39/86 Test #27: testing/ssac_res .......................   Passed    0.18 sec
+      Start 30: testing/erf1
+40/86 Test #28: testing/noise_res ......................   Passed    0.18 sec
+      Start 31: testing/erf2
+41/86 Test #29: testing/symdiff1 .......................   Passed    0.19 sec
+      Start 32: testing/mesh1
+42/86 Test #30: testing/erf1 ...........................   Passed    0.17 sec
+      Start 33: testing/mesh2
+43/86 Test #31: testing/erf2 ...........................   Passed    0.12 sec
+      Start 37: testing/transient_circ
+44/86 Test #32: testing/mesh1 ..........................   Passed    0.18 sec
+      Start 38: testing/transient_circ2
+45/86 Test #33: testing/mesh2 ..........................   Passed    0.16 sec
+      Start 39: testing/transient_circ3
+46/86 Test #37: testing/transient_circ .................   Passed    0.15 sec
+      Start 40: testing/transient_rc
+47/86 Test #38: testing/transient_circ2 ................   Passed    0.16 sec
+      Start 41: testing/circ1
+48/86 Test #39: testing/transient_circ3 ................   Passed    0.15 sec
+      Start 42: testing/circ2
+49/86 Test #40: testing/transient_rc ...................   Passed    0.29 sec
+      Start 43: testing/circ3
+50/86 Test #42: testing/circ2 ..........................   Passed    0.23 sec
+      Start 44: testing/circ4
+51/86 Test #41: testing/circ1 ..........................   Passed    0.33 sec
+      Start 45: testing/ssac_circ
+52/86 Test #43: testing/circ3 ..........................   Passed    0.16 sec
+      Start 49: testing/dio2_element_2d
+53/86 Test #45: testing/ssac_circ ......................   Passed    0.21 sec
+      Start 51: testing/mos_2d_restart
+54/86 Test #44: testing/circ4 ..........................   Passed    0.26 sec
+      Start 53: testing/pythonmesh1d_comp
+55/86 Test #68: examples/bioapp1/bioapp1_2d ............   Passed    7.81 sec
+      Start 54: testing/mesh3_comp
+56/86 Test #54: testing/mesh3_comp .....................   Passed    0.05 sec
+      Start 55: testing/mesh4_comp
+57/86 Test #53: testing/pythonmesh1d_comp ..............   Passed    0.16 sec
+      Start 56: testing/trimesh2_msh_comp
+58/86 Test #55: testing/mesh4_comp .....................   Passed    0.07 sec
+      Start 57: testing/trimesh3_msh_comp
+59/86 Test #56: testing/trimesh2_msh_comp ..............   Passed    0.05 sec
+      Start 58: testing/mesh2d_msh_comp
+60/86 Test #57: testing/trimesh3_msh_comp ..............   Passed    0.06 sec
+      Start 59: testing/mesh2d_tec_comp
+61/86 Test #58: testing/mesh2d_msh_comp ................   Passed    0.05 sec
+      Start 60: testing/mesh2d_reduced_tec_comp
+62/86 Test #59: testing/mesh2d_tec_comp ................   Passed    0.05 sec
+      Start 61: testing/noise_res_2d_tec_comp
+63/86 Test #60: testing/mesh2d_reduced_tec_comp ........   Passed    0.05 sec
+      Start 62: testing/mos_2d_dd_comp
+64/86 Test #61: testing/noise_res_2d_tec_comp ..........   Passed    0.06 sec
+      Start 63: testing/mos_2d_vtu_comp
+65/86 Test #62: testing/mos_2d_dd_comp .................   Passed    0.06 sec
+      Start 64: testing/mos_2d_restart2_comp
+66/86 Test #63: testing/mos_2d_vtu_comp ................   Passed    0.09 sec
+      Start 65: examples/capacitance/cap1d
+67/86 Test #64: testing/mos_2d_restart2_comp ...........   Passed    0.07 sec
+      Start 67: examples/capacitance/cap2d_comp
+68/86 Test #67: examples/capacitance/cap2d_comp ........   Passed    0.08 sec
+      Start 69: examples/bioapp1/bioapp1_2d_comp
+69/86 Test #49: testing/dio2_element_2d ................   Passed    0.74 sec
+      Start 71: examples/bioapp1/bioapp1_3d_comp
+70/86 Test #71: examples/bioapp1/bioapp1_3d_comp .......   Passed    0.06 sec
+      Start 72: examples/diode/diode_1d
+71/86 Test #69: examples/bioapp1/bioapp1_2d_comp .......   Passed    0.09 sec
+      Start 73: examples/diode/diode_1d_custom
+72/86 Test #51: testing/mos_2d_restart .................   Passed    0.65 sec
+      Start 74: examples/diode/diode_2d
+73/86 Test #65: examples/capacitance/cap1d .............   Passed    0.23 sec
+      Start 77: examples/diode/gmsh_diode3d_float128
+74/86 Test #73: examples/diode/diode_1d_custom .........   Passed    0.54 sec
+      Start 78: examples/diode/ssac_diode
+75/86 Test #72: examples/diode/diode_1d ................   Passed    0.63 sec
+      Start 79: examples/diode/tran_diode
+76/86 Test #78: examples/diode/ssac_diode ..............   Passed    0.60 sec
+      Start 80: examples/diode/laux2d
+77/86 Test #74: examples/diode/diode_2d ................   Passed    1.54 sec
+      Start 81: examples/diode/laux3d
+78/86 Test #79: examples/diode/tran_diode ..............   Passed    0.98 sec
+      Start 82: examples/diode/pythonmesh3d
+79/86 Test #80: examples/diode/laux2d ..................   Passed    0.95 sec
+      Start 83: examples/mobility/gmsh_mos2d
+80/86 Test #82: examples/diode/pythonmesh3d ............   Passed    0.49 sec
+      Start 84: examples/mobility/gmsh_mos2d_kla
+81/86 Test #83: examples/mobility/gmsh_mos2d ...........   Passed    5.09 sec
+      Start 85: examples/mobility/pythonmesh2d
+82/86 Test #85: examples/mobility/pythonmesh2d .........   Passed    0.21 sec
+      Start 86: examples/vectorpotential/twowire
+83/86 Test #86: examples/vectorpotential/twowire .......   Passed    3.27 sec
+84/86 Test #77: examples/diode/gmsh_diode3d_float128 ...   Passed   10.64 sec
+85/86 Test #81: examples/diode/laux3d ..................   Passed    9.19 sec
+86/86 Test #84: examples/mobility/gmsh_mos2d_kla .......   Passed   22.66 sec
+
+100% tests passed, 0 tests failed out of 86
+
+Total Test time (real) =  33.44 sec
